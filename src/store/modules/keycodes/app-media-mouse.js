@@ -3,41 +3,45 @@ export default [
 
   { label: 'Application', width: 'label' },
 
-  { name: 'Power', code: 'KC_PWR', title: 'System Power Down' },
-  { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep' },
-  { name: 'Wake', code: 'KC_WAKE', title: 'System Wake' },
-  { width: 1250 },
-  { name: 'Exec', code: 'KC_EXEC', title: 'Execute' },
-  { name: 'Help', code: 'KC_HELP', title: 'Help' },
-  { name: 'Menu', code: 'KC_MENU', title: 'Menu (Legacy)' },
-  { name: 'Select', code: 'KC_SLCT', title: 'Select' },
-  { name: 'Stop', code: 'KC_STOP', title: 'Stop' },
-  { name: 'Again', code: 'KC_AGIN', title: 'Again' },
-  { name: 'Undo', code: 'KC_UNDO', title: 'Undo' },
-  { name: 'Cut', code: 'KC_CUT', title: 'Cut' },
-  { name: 'Copy', code: 'KC_COPY', title: 'Copy' },
-  { name: 'Paste', code: 'KC_PSTE', title: 'Paste' },
-  { name: 'Find', code: 'KC_FIND', title: 'Find' },
+  { name: 'Power', code: 'KC_PWR', title: 'System Power Down', width: 1250 },
+  { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep', width: 1250 },
+  { name: 'Wake', code: 'KC_WAKE', title: 'System Wake', width: 1250 },
+  { width: 1500 },
+  { name: 'Exec', code: 'KC_EXEC', title: 'Execute', width: 1250 },
+  { name: 'Help', code: 'KC_HELP', title: 'Help', width: 1250 },
+  { name: 'Menu', code: 'KC_MENU', title: 'Menu (Legacy)', width: 1250 },
+  { name: 'Select', code: 'KC_SLCT', title: 'Select', width: 1250 },
+  { name: 'Stop', code: 'KC_STOP', title: 'Stop', width: 1250 },
+  { name: 'Again', code: 'KC_AGIN', title: 'Again', width: 1250 },
+  { name: 'Undo', code: 'KC_UNDO', title: 'Undo', width: 1250 },
+  { name: 'Cut', code: 'KC_CUT', title: 'Cut', width: 1250 },
+  { name: 'Copy', code: 'KC_COPY', title: 'Copy', width: 1250 },
+  { name: 'Paste', code: 'KC_PSTE', title: 'Paste', width: 1250 },
+  { name: 'Find', code: 'KC_FIND', title: 'Find', width: 1250 },
   { width: 0 },
   {
     name: 'Calc',
     code: 'KC_CALC',
-    title: 'Launch Calculator (Windows)'
+    title: 'Launch Calculator (Windows)',
+    width: 1250
   },
   {
     name: 'Mail',
     code: 'KC_MAIL',
-    title: 'Launch Mail (Windows)'
+    title: 'Launch Mail (Windows)',
+    width: 1250
   },
   {
     name: 'Media Player',
     code: 'KC_MSEL',
-    title: 'Launch Media Player (Windows)'
+    title: 'Launch Media Player (Windows)',
+    width: 1250
   },
   {
     name: 'My PC',
     code: 'KC_MYCM',
-    title: 'Launch My Computer (Windows)'
+    title: 'Launch My Computer (Windows)',
+    width: 1250
   },
   { width: 250 },
   {
@@ -97,59 +101,64 @@ export default [
 
   { label: 'Multimedia Keys', width: 'label' },
 
-  { name: 'Previous', code: 'KC_MPRV', title: 'Previous Track' },
-  { name: 'Next', code: 'KC_MNXT', title: 'Next Track' },
-  { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio' },
-  { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
-  { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
-  { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
-  { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
+  { name: 'Previous', code: 'KC_MPRV', title: 'Previous Track', width: 1250 },
+  { name: 'Next', code: 'KC_MNXT', title: 'Next Track', width: 1250 },
+  { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio', width: 1250 },
+  { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down', width: 1250 },
+  { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up', width: 1250 },
+  { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop', width: 1250 },
+  { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause', width: 1250 },
   { width: 250 },
   {
     name: 'Prev Track',
     code: 'KC_MRWD',
-    title: 'Previous Track / Rewind (macOS)'
+    title: 'Previous Track / Rewind (macOS)',
+    width: 1250
   },
   {
     name: 'Next Track',
     code: 'KC_MFFD',
-    title: 'Next Track / Fast Forward (macOS)'
+    title: 'Next Track / Fast Forward (macOS)',
+    width: 1250
   },
   { width: 250 },
-  { name: 'Eject', code: 'KC_EJCT', title: 'Eject (macOS)' },
+  { name: 'Eject', code: 'KC_EJCT', title: 'Eject (macOS)', width: 1250 },
 
   { label: 'Mouse Keys', width: 'label' },
 
-  { name: 'Mouse Up', code: 'KC_MS_U', title: 'Mouse Cursor Up' },
-  { name: 'Mouse Down', code: 'KC_MS_D', title: 'Mouse Cursor Down' },
-  { name: 'Mouse Left', code: 'KC_MS_L', title: 'Mouse Cursor Left' },
-  { name: 'Mouse Right', code: 'KC_MS_R', title: 'Mouse Cursor Right' },
+  { name: 'Mouse Up', code: 'KC_MS_U', title: 'Mouse Cursor Up', width: 1250 },
+  { name: 'Mouse Down', code: 'KC_MS_D', title: 'Mouse Cursor Down', width: 1250 },
+  { name: 'Mouse Left', code: 'KC_MS_L', title: 'Mouse Cursor Left', width: 1250 },
+  { name: 'Mouse Right', code: 'KC_MS_R', title: 'Mouse Cursor Right', width: 1250 },
   { width: 250 },
-  { name: 'Mouse 1', code: 'KC_BTN1', title: 'Mouse Button 1' },
-  { name: 'Mouse 2', code: 'KC_BTN2', title: 'Mouse Button 2' },
-  { name: 'Mouse 3', code: 'KC_BTN3', title: 'Mouse Button 3' },
-  { name: 'Mouse 4', code: 'KC_BTN4', title: 'Mouse Button 4' },
-  { name: 'Mouse 5', code: 'KC_BTN5', title: 'Mouse Button 5' },
+  { name: 'Mouse 1', code: 'KC_BTN1', title: 'Mouse Button 1', width: 1250 },
+  { name: 'Mouse 2', code: 'KC_BTN2', title: 'Mouse Button 2', width: 1250 },
+  { name: 'Mouse 3', code: 'KC_BTN3', title: 'Mouse Button 3', width: 1250 },
+  { name: 'Mouse 4', code: 'KC_BTN4', title: 'Mouse Button 4', width: 1250 },
+  { name: 'Mouse 5', code: 'KC_BTN5', title: 'Mouse Button 5', width: 1250 },
   { width: 250 },
-  { name: 'Mouse Wheel Up', code: 'KC_WH_U', title: 'Mouse Wheel Up' },
-  { name: 'Mouse Wheel Down', code: 'KC_WH_D', title: 'Mouse Wheel Down' },
-  { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'Mouse Wheel Left' },
-  { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'Mouse Wheel Right' },
+  { name: 'Mouse Wheel Up', code: 'KC_WH_U', title: 'Mouse Wheel Up', width: 1250 },
+  { name: 'Mouse Wheel Down', code: 'KC_WH_D', title: 'Mouse Wheel Down', width: 1250 },
+  { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'Mouse Wheel Left', width: 1250 },
+  { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'Mouse Wheel Right', width: 1250 },
   { width: 250 },
   {
     name: 'Mouse Accel 0',
     code: 'KC_ACL0',
-    title: 'Set mouse acceleration to 0'
+    title: 'Set mouse acceleration to 0',
+    width: 1250
   },
   {
     name: 'Mouse Accel 1',
     code: 'KC_ACL1',
-    title: 'Set mouse acceleration to 1'
+    title: 'Set mouse acceleration to 1',
+    width: 1250
   },
   {
     name: 'Mouse Accel 2',
     code: 'KC_ACL2',
-    title: 'Set mouse acceleration to 2'
+    title: 'Set mouse acceleration to 2',
+    width: 1250
   },
 
   { label: 'Extra Fn Keys', width: 'label' },

@@ -46,11 +46,24 @@ keycodesTab:AppMediaMouse:label,"App, Media and Mouse"
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Keyboard Settings
 keycodesTab:Quantum:label,Quantum
+keycodesTab:Wireless:label,Wireless
 keymap:label,Keymap
 keymapHelp:label,Help
 keymapHelp:title,How do I use keymap.json?
 keymapName:label,Keymap Name
 keymapName:placeholder,custom keymap name
+speed:label,BLE Speed
+speed:placeholder,""
+power:label,BLE Power
+power:placeholder,""
+bandwidth:label,BLE Bandwidth
+bandwidth:placeholder,""
+sleepDelay:label,Sleep Delay
+sleepDelay:placeholder,"unit: s, default: 30 min"
+wakeupKey:label,WakeUp Key
+wakeupKey:placeholder,"Wake up key"
+rgbNum:label,RGB LED Count
+rgbNum:placeholder,"unit: s, default: 16"
 layer:confirm,Are you sure you want to clear layer?
 layer:label,Layer
 layer:title,Clear Layer

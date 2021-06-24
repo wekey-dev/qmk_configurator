@@ -14,7 +14,7 @@ function setDefaultConfiguratorSettings() {
     darkmodeEnabled: osDarkMode,
     favoriteKeyboard: '',
     favoriteColor: '',
-    clearLayerDefault: false
+    clearLayerDefault: true
   };
   localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
   return initialConfig;
@@ -61,16 +61,23 @@ const state = {
   notes: '',
   tutorialEnabled: false,
   electron: false,
+  sleepDelay: 1800000,
+  wakeupKey: 1,
+  power: 4,
+  speed: 3,
+  bandwidth: 1,
+  rgbNum: 16,
   languages: [
     { value: 'en', label: 'English' },
-    { value: 'de', label: 'Deutsch' },
-    { value: 'fr', label: 'Français' },
-    { value: 'es', label: 'Español' },
+    // { value: 'de', label: 'Deutsch' },
+    // { value: 'fr', label: 'Français' },
+    // { value: 'es', label: 'Español' },
     { value: 'ja', label: 'Japanese' },
-    { value: 'ru', label: 'Русский' },
-    { value: 'pt-BR', label: 'Brasileira' },
-    { value: 'pl-PL', label: 'Polski' },
-    { value: 'ms', label: 'Bahasa Malaysia' },
+    { value: 'vi', label: 'Vietnam' },
+    // { value: 'ru', label: 'Русский' },
+    // { value: 'pt-BR', label: 'Brasileira' },
+    // { value: 'pl-PL', label: 'Polski' },
+    // { value: 'ms', label: 'Bahasa Malaysia' },
     { value: 'zh-CN', label: '简体中文' }
   ],
   snowflakes: false

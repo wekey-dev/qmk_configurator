@@ -46,6 +46,7 @@ keycodesTab:AppMediaMouse:label,应用、多媒体和鼠标
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,键盘设置
 keycodesTab:Quantum:label,量子
+keycodesTab:Wireless:label,无线的
 keymap:label,键位
 keymapHelp:label,帮助
 keymapHelp:title,如何使用 keymap.json？

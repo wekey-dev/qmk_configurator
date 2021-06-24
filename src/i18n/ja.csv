@@ -46,6 +46,7 @@ keycodesTab:AppMediaMouse:label,"App, Media and Mouse"
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Keyboard Settings
 keycodesTab:Quantum:label,Quantum
+keycodesTab:Wireless:label,Wireless
 keymap:label,Keymap
 keymapHelp:label,ヘルプ
 keymapHelp:title,keymap.jsonを使用するにはどうすればいいですか？

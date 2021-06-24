@@ -73,6 +73,81 @@
         </button>
       </div>
     </div>
+    <div id="ble-config">
+      <p>Settings</p>
+      <div class="row">
+        <div class="col">
+          <label v-tooltip="$t('sleepDelay.label')">{{ $t('sleepDelay.label') }}:</label>
+          <select v-model="sleepDelay" disabled="disabled">
+            <option value="0">Disable</option>
+            <option value="300000">5 min</option>
+            <option value="600000">10 min</option>
+            <option value="900000">15 min</option>
+            <option value="1200000">20 min</option>
+            <option value="1800000">30 min</option>
+            <option value="3600000">1 h</option>
+          </select>
+        </div>
+        <div class="col">
+          <label v-tooltip="$t('speed.label')" >{{ $t('speed.label') }}:</label>
+          <select v-model="speed" disabled="disabled">
+            <option value="1">Energy saving</option>
+            <option value="2">Balance</option>
+            <option value="3">High speed</option>
+            <option value="4">Super fast</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label v-tooltip="$t('wakeupKey.label')">{{ $t('wakeupKey.label') }}:</label>
+          <select v-model="wakeupKey" disabled="disabled">
+            <option value="0">Any key</option>
+            <option value="1">ESC</option>
+            <option value="2">ENTER</option>
+            <option value="3">BACKSPACE</option>
+            <option value="4">TAB</option>
+            <option value="5">SPACE</option>
+            <option value="6">CAPSLOCK</option>
+          </select>
+        </div>
+        <div class="col">
+          <label v-tooltip="$t('power.label')" >{{ $t('power.label') }}:</label>
+          <select v-model="power" disabled="disabled">
+            <option value="0">Normal</option>
+            <option value="4">Strong</option>
+            <option value="8">Extreme</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label v-tooltip="$t('rgbNum.label')" >{{ $t('rgbNum.label') }}:</label>
+          <select v-model="rgbNum">
+            <option value="16">Default</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+        <div class="col">
+          <label v-tooltip="$t('bandwidth.label')" >{{ $t('bandwidth.label') }}:</label>
+          <select v-model="bandwidth" disabled="disabled">
+            <option value="0">Low</option>
+            <option value="1">Normal</option>
+            <option value="2">High</option>
+            <option value="3">Max</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -114,6 +189,108 @@ export default {
     },
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
+    },
+    sleepDelay: {
+      get() {
+        return this.$store.state.app.sleepDelay;
+      },
+      set(value) {
+        if (this.isDirty) {
+          var old = this.sleepDelay;
+          this.setSleepDelay(''); // force a refresh
+          Vue.nextTick(() => {
+            this.setSleepDelay(old);
+          });
+          return false;
+        } else {
+          this.setSleepDelay(value);
+        }
+      }
+    },
+    wakeupKey: {
+      get() {
+        return this.$store.state.app.wakeupKey;
+      },
+      set(value) {
+        if (this.isDirty) {
+          var old = this.wakeupKey;
+          this.setWakeupKey(''); // force a refresh
+          Vue.nextTick(() => {
+            this.setWakeupKey(old);
+          });
+          return false;
+        } else {
+          this.setWakeupKey(value);
+        }
+      }
+    },
+    speed: {
+      get() {
+        return this.$store.state.app.speed;
+      },
+      set(value) {
+        if (this.isDirty) {
+          var old = this.speed;
+          this.setSpeed(''); // force a refresh
+          Vue.nextTick(() => {
+            this.setSpeed(old);
+          });
+          return false;
+        } else {
+          this.setSpeed(value);
+        }
+      }
+    },
+    power: {
+      get() {
+        return this.$store.state.app.power;
+      },
+      set(value) {
+        if (this.isDirty) {
+          var old = this.power;
+          this.setPower(''); // force a refresh
+          Vue.nextTick(() => {
+            this.setPower(old);
+          });
+          return false;
+        } else {
+          this.setPower(value);
+        }
+      }
+    },
+    bandwidth: {
+      get() {
+        return this.$store.state.app.bandwidth;
+      },
+      set(value) {
+        if (this.isDirty) {
+          var old = this.bandwidth;
+          this.setBandwidth(''); // force a refresh
+          Vue.nextTick(() => {
+            this.setBandwidth(old);
+          });
+          return false;
+        } else {
+          this.setBandwidth(value);
+        }
+      }
+    },
+    rgbNum: {
+      get() {
+        return this.$store.state.app.rgbNum;
+      },
+      set(value) {
+        if (this.isDirty) {
+          var old = this.rgbNum;
+          this.setRgbNum(''); // force a refresh
+          Vue.nextTick(() => {
+            this.setRgbNum(old);
+          });
+          return false;
+        } else {
+          this.setRgbNum(value);
+        }
+      }
     },
     keyboard: {
       get() {
@@ -211,7 +388,13 @@ export default {
       'startListening',
       'previewRequested',
       'setKeyboard',
-      'setKeymapName'
+      'setKeymapName',
+      'setSpeed',
+      'setPower',
+      'setBandwidth',
+      'setSleepDelay',
+      'setRgbNum',
+      'setWakeupKey'
     ]),
     ...mapActions('app', [
       'changeKeyboard',
@@ -372,7 +555,14 @@ export default {
         keymapName === ''
           ? _keymapName.slice(this.keyboard.length + 1, _keymapName.length)
           : keymapName;
-      compileLayout(this.keyboard, keymapName, this.layout);
+      compileLayout(this.keyboard, keymapName, this.layout, {
+        speed: Number(this.speed),
+        power: Number(this.power),
+        bandwidth: Number(this.bandwidth),
+        sleepDelay: Number(this.sleepDelay),
+        wakeupKey: Number(this.wakeupKey),
+        rgbNum: Number(this.rgbNum)
+      });
     },
     updateFilter(filter) {
       this.$store.commit('app/setFilter', filter);
@@ -420,7 +610,7 @@ export default {
 .topctrl {
   text-align: left;
   display: grid;
-  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] minmax(700px, 3fr) [right] 2fr;
+  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] minmax(700px, 2fr) [right] 2fr;
   grid-row-gap: 2px;
 }
 #controller-top {
@@ -494,5 +684,72 @@ export default {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
+}
+#ble-config {
+  padding: 20px 10px 10px 10px;
+  margin-bottom: 24px;
+  border: 1px solid #d4d0d0;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 4px;
+}
+#ble-config * {
+  box-sizing: border-box;
+}
+#ble-config .row::after {
+  display: block;
+  width: 100%;
+  content: '';
+  height: 4px;
+  clear: both;
+}
+#ble-config .col {
+  width: 50%;
+  min-height: 24px;
+  float: left;
+}
+#ble-config > p {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 8px;
+  margin: 5px;
+  position: absolute;
+  top: -13px;
+  left: 5%;
+  background-color: #eee;
+  text-transform: uppercase;
+}
+html[data-theme='dark'] #ble-config > p, html[data-theme='dark'] #ble-config > p {
+  background-color: #464646;
+}
+#ble-config label {
+  float: left;
+  width: 30%;
+  text-align: right;
+  line-height: 34px;
+  padding-right: 8px;
+  text-transform: none;
+}
+#ble-config input {
+  border-radius: 4px;
+  border: 1px solid;
+  width: 70%;
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  max-width: 220px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#ble-config select {
+  border-radius: 4px;
+  border: 1px solid;
+  width: 70%;
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  max-width: 220px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 </style>

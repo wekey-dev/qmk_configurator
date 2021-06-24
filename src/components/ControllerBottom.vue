@@ -95,6 +95,7 @@
     <div v-else class="botctrl-1-2">
       <button
         class="fixed-size"
+        style="display:none"
         id="source"
         @click="downloadSource"
         v-tooltip="$t('downloadSource.title')"

@@ -1375,3 +1375,113 @@
   background: rgb(192, 208, 54);
   color: rgb(54, 71, 92);
 }
+
+
+.mt3-serika-key {
+  background: #ece4d0;
+  color: #333732;
+  // font-weight: 600;
+  input,
+  .key-contents {
+    background: lighten(#ece4d0, 10%);
+    color: #333732;
+    border-color: mix(#ece4d0, #333732);
+  }
+}
+.mt3-serika-mod {
+  background: #ffcd00;
+  color: #333732;
+  // font-weight: 600;
+  input,
+  .key-contents {
+    background: lighten(#ffcd00, 10%);
+    color: #333732;
+    border-color: mix(#ffcd00, #333732);
+  }
+}
+.mt3-serika-accent {
+  background: #333732;
+  color: #ece4d0;
+  // font-weight: 600;
+}
+
+.mt3-susuwatari-key {
+  background: #2d2d2d;
+  color: #d2cbb8;
+  // font-weight: 600;
+  input,
+  .key-contents {
+    background: lighten(#2d2d2d, 10%);
+    color: #d2cbb8;
+    border-color: mix(#2d2d2d, #d2cbb8);
+  }
+}
+.mt3-susuwatari-mod {
+  background: #0D0D0D;
+  color: #d2cbb8;
+  // font-weight: 600;
+  input,
+  .key-contents {
+    background: lighten(#0D0D0D, 10%);
+    color: #d2cbb8;
+    border-color: mix(#0D0D0D, #d2cbb8);
+  }
+}
+.mt3-susuwatari-accent {
+  background: #CB1E02;
+  color: #d2cbb8;
+  // font-weight: 600;
+}
+
+.mt3-dev_tty-key {
+  background: #eaeae8;
+  color: #2B2C2B;
+  // font-weight: 600;
+  input,
+  .key-contents {
+    background: lighten(#eaeae8, 10%);
+    color: #2B2C2B;
+    border-color: mix(#eaeae8, #2B2C2B);
+  }
+}
+.mt3-dev_tty-mod {
+  background: #CCCCC4;
+  color: #2B2C2B;
+  // font-weight: 600;
+  input,
+  .key-contents {
+    background: lighten(#CCCCC4, 10%);
+    color: #2B2C2B;
+    border-color: mix(#CCCCC4, #2B2C2B);
+  }
+}
+.mt3-dev_tty-accent {
+  background: #e23b11;
+  color: #2B2C2B;
+  // font-weight: 600;
+}
+
+.mg-ember-key {
+  background: #68645C;
+  color: #E4C379;
+  input,
+  .key-contents {
+    background: lighten(#FFF6E7, 10%);
+    color: #E7C169;
+    border-color: mix(#FFF6E7, #2B2C2B);
+  }
+}
+.mg-ember-mod {
+  background: #3A3B36;
+  color: #E4C379;
+  input,
+  .key-contents {
+    background: lighten(#626053, 10%);
+    color: #E4C379;
+    border-color: mix(#626053, #2B2C2B);
+  }
+}
+.mg-ember-accent {
+  background: #E4C379;
+  color: #584e35;
+} 

@@ -7,7 +7,8 @@ function makeLT(layer) {
     code: `LT(${layer},kc)`,
     type: 'layer-container',
     layer: layer,
-    title: `kc on tap, switch to layer ${layer} while held`
+    title: `kc on tap, switch to layer ${layer} while held`,
+    width: 1250
   };
 }
 // make a One-Shot Mod Keycode Definition
@@ -32,7 +33,7 @@ const osmLookup = {
   'MOD_LCTL|MOD_LALT|MOD_LGUI': ['CAG', 'Control, Alt, and GUI'],
   'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI']
 };
-function makeOSM(mod, width = 1000) {
+function makeOSM(mod, width = 1250) {
   const tuple = osmLookup[mod];
   if (isUndefined(tuple)) {
     throw new Error(`${mod} is not a valid One Shot Mod`);
@@ -57,22 +58,21 @@ export default [
     code: 'KC_TRNS',
     title: 'Use the next lowest non-transparent key'
   },
-  { name: 'Reset', code: 'RESET', title: 'Reset the keyboard' },
-  { name: 'Debug', code: 'DEBUG', title: 'Toggle debug mode' },
-  {
-    name: 'EEPROM Reset',
-    code: 'EEP_RST',
-    title: 'Resets EEPROM state',
-    width: 1500
-  },
-  { width: 1000 },
   {
     name: 'Any',
     code: 'text',
     type: 'text',
     title: 'Manually enter any QMK keycode'
   },
-
+  // { width: 1000 },
+  // { name: 'Reset', code: 'RESET', title: 'Reset the keyboard', width: 1250 },
+  // { name: 'Debug', code: 'DEBUG', title: 'Toggle debug mode', width: 1250 },
+  // {
+  //   name: 'EEPROM Reset',
+  //   code: 'EEP_RST',
+  //   title: 'Resets EEPROM state',
+  //   width: 1500
+  // },
   {
     label: 'Layer and Layer Tap functions',
     icon: 'exclamation-triangle',
@@ -136,15 +136,15 @@ export default [
   makeLT(5),
   makeLT(6),
   makeLT(7),
-  { width: 250 },
+  // { width: 250 },
   makeLT(8),
   makeLT(9),
-  makeLT(10),
-  makeLT(11),
-  makeLT(12),
-  makeLT(13),
-  makeLT(14),
-  makeLT(15),
+  // makeLT(10),
+  // makeLT(11),
+  // makeLT(12),
+  // makeLT(13),
+  // makeLT(14),
+  // makeLT(15),
 
   {
     label:
@@ -152,135 +152,155 @@ export default [
     width: 'label'
   },
 
-  { name: 'LSft', code: 'LSFT(kc)', type: 'container' },
-  { name: 'LCtl', code: 'LCTL(kc)', type: 'container' },
-  { name: 'LAlt', code: 'LALT(kc)', type: 'container' },
-  { name: 'LGui', code: 'LGUI(kc)', type: 'container' },
-  { name: 'RSft', code: 'RSFT(kc)', type: 'container' },
-  { name: 'RCtl', code: 'RCTL(kc)', type: 'container' },
-  { name: 'RAlt', code: 'RALT(kc)', type: 'container' },
-  { name: 'RGui', code: 'RGUI(kc)', type: 'container' },
+  { name: 'LSft', code: 'LSFT(kc)', type: 'container', width: 1250 },
+  { name: 'LCtl', code: 'LCTL(kc)', type: 'container', width: 1250 },
+  { name: 'LAlt', code: 'LALT(kc)', type: 'container', width: 1250 },
+  { name: 'LGui', code: 'LGUI(kc)', type: 'container', width: 1250 },
+  { name: 'RSft', code: 'RSFT(kc)', type: 'container', width: 1250 },
+  { name: 'RCtl', code: 'RCTL(kc)', type: 'container', width: 1250 },
+  { name: 'RAlt', code: 'RALT(kc)', type: 'container', width: 1250 },
+  { name: 'RGui', code: 'RGUI(kc)', type: 'container', width: 1250 },
   { width: 0 },
   {
     name: 'LSft_T',
     code: 'LSFT_T(kc)',
     type: 'container',
-    title: 'Left Shift when held, kc when tapped'
+    title: 'Left Shift when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'LCtl_T',
     code: 'LCTL_T(kc)',
     type: 'container',
-    title: 'Left Control when held, kc when tapped'
+    title: 'Left Control when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'LAlt_T',
     code: 'LALT_T(kc)',
     type: 'container',
-    title: 'Left Alt when held, kc when tapped'
+    title: 'Left Alt when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'LGui_T',
     code: 'LGUI_T(kc)',
     type: 'container',
-    title: 'Left GUI when held, kc when tapped'
+    title: 'Left GUI when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'RSft_T',
     code: 'RSFT_T(kc)',
     type: 'container',
-    title: 'Right Shift when held, kc when tapped'
+    title: 'Right Shift when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'RCtl_T',
     code: 'RCTL_T(kc)',
     type: 'container',
-    title: 'Right Control when held, kc when tapped'
+    title: 'Right Control when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'RAlt_T',
     code: 'RALT_T(kc)',
     type: 'container',
-    title: 'Right Alt when held, kc when tapped'
+    title: 'Right Alt when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'RGui_T',
     code: 'RGUI_T(kc)',
     type: 'container',
-    title: 'Right GUI when held, kc when tapped'
+    title: 'Right GUI when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'C_S_T',
     code: 'C_S_T(kc)',
     type: 'container',
-    title: 'Left Control + Left Shift when held, kc when tapped'
+    title: 'Left Control + Left Shift when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'All_T',
     code: 'ALL_T(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT + LGUI when held, kc when tapped'
+    title: 'LCTL + LSFT + LALT + LGUI when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'Meh_T',
     code: 'MEH_T(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT when held, kc when tapped'
+    title: 'LCTL + LSFT + LALT when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'LCAG_T',
     code: 'LCAG_T(kc)',
     type: 'container',
-    title: 'LCTL + LALT + LGUI when held, kc when tapped'
+    title: 'LCTL + LALT + LGUI when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'RCAG_T',
     code: 'RCAG_T(kc)',
     type: 'container',
-    title: 'RCTL + RALT + RGUI when held, kc when tapped'
+    title: 'RCTL + RALT + RGUI when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'SGUI_T',
     code: 'SGUI_T(kc)',
     type: 'container',
-    title: 'LGUI + LSFT when held, kc when tapped'
+    title: 'LGUI + LSFT when held, kc when tapped',
+    width: 1250
   },
   {
     name: 'LCA_T',
     code: 'LCA_T(kc)',
     type: 'container',
-    title: 'LCTL + LALT when held, kc when tapped'
+    title: 'LCTL + LALT when held, kc when tapped',
+    width: 1250
   },
   { width: 0 },
   {
     name: 'Hyper',
     code: 'HYPR(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT + LGUI'
+    title: 'LCTL + LSFT + LALT + LGUI',
+    width: 1250
   },
   {
     name: 'Meh',
     code: 'MEH(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT'
+    title: 'LCTL + LSFT + LALT',
+    width: 1250
   },
   {
     name: 'LCAG',
     code: 'LCAG(kc)',
     type: 'container',
-    title: 'LCTL + LALT + LGUI'
+    title: 'LCTL + LALT + LGUI',
+    width: 1250
   },
   {
     name: 'SGUI',
     code: 'SGUI(kc)',
     type: 'container',
-    title: 'LGUI + LSFT'
+    title: 'LGUI + LSFT',
+    width: 1250
   },
   {
     name: 'LCA',
     code: 'LCA(kc)',
     type: 'container',
-    title: 'LCTL + LALT'
+    title: 'LCTL + LALT',
+    width: 1250
   },
 
   { width: 0 },
@@ -315,41 +335,49 @@ export default [
   {
     name: 'Esc/~',
     code: 'KC_GESC',
-    title: 'Esc normally, but ~ when Shift or GUI is pressed'
+    title: 'Esc normally, but ~ when Shift or GUI is pressed',
+    width: 1250
   },
   {
     name: 'LS/(',
     code: 'KC_LSPO',
-    title: 'Left Shift when held, ( when tapped'
+    title: 'Left Shift when held, ( when tapped',
+    width: 1250
   },
   {
     name: 'RS/)',
     code: 'KC_RSPC',
-    title: 'Right Shift when held, ) when tapped'
+    title: 'Right Shift when held, ) when tapped',
+    width: 1250
   },
   {
     name: 'LC/(',
     code: 'KC_LCPO',
-    title: 'Left Control when held, ( when tapped'
+    title: 'Left Control when held, ( when tapped',
+    width: 1250
   },
   {
     name: 'RC/)',
     code: 'KC_RCPC',
-    title: 'Right Control when held, ) when tapped'
+    title: 'Right Control when held, ) when tapped',
+    width: 1250
   },
   {
     name: 'LA/(',
     code: 'KC_LAPO',
-    title: 'Left Alt when held, ( when tapped'
+    title: 'Left Alt when held, ( when tapped',
+    width: 1250
   },
   {
     name: 'RA/)',
     code: 'KC_RAPC',
-    title: 'Right Alt when held, ) when tapped'
+    title: 'Right Alt when held, ) when tapped',
+    width: 1250
   },
   {
     name: 'RS / Enter',
     code: 'KC_SFTENT',
-    title: 'Right Shift when held, Enter when tapped'
+    title: 'Right Shift when held, Enter when tapped',
+    width: 1250
   }
 ];

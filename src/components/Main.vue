@@ -5,7 +5,7 @@
       <statusPanel />
       <controllerBottom />
     </div>
-    <div class="hint hint-right">
+    <!--div class="hint hint-right">
       <a
         href="https://github.com/qmk/qmk_toolbox/releases"
         v-tooltip="$t('downloadToolbox.label')"
@@ -13,7 +13,7 @@
         rel="noopener"
         >{{ $t('downloadToolbox.label') }}</a
       >
-    </div>
+    </div-->
     <div class="split-content">
       <div class="left-side">
         <layerControl />
@@ -120,6 +120,8 @@ export default {
           .replace(/Kat/, 'KAT')
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA')
+          .replace(/Mt3/, 'MT3')
+          .replace(/Mg/, 'MG')
           .replace(/ ?Plus/g, '+')
           .replace(/ ?Dot ?/g, '\.');
       });
@@ -169,6 +171,12 @@ export default {
 }
 #colorway-select {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  line-height: 26px;
+  height: 26px;
+  padding: 0;
+  margin: 0;
 }
 .beta-feedback {
   position: fixed;
@@ -183,6 +191,7 @@ export default {
 }
 .keymap--label {
   float: left;
+  line-height: 26px;
 }
 .keymap--counter {
   display: inline-block;
@@ -199,6 +208,6 @@ export default {
 .keymap--area {
   margin-top: 1em;
   margin-bottom: 1em;
-  height: 1.5em;
+  height: 26px;
 }
 </style>

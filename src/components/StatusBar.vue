@@ -28,7 +28,7 @@
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
     </div>
-    <div class="bes-discord">
+    <div class="bes-discord" style="display:none;">
       <a v-if="hasError" target="_blank" rel="noopener" :href="discordLink">
         Error? Let us know on QMK Discord.
       </a>

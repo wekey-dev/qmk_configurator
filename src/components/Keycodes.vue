@@ -4,7 +4,7 @@
 -->
 <template>
   <div id="keycodes-section">
-    <div style="text-align: left; margin-left: 10px;">
+    <div style="text-align: left; margin-left: 10px; display:none">
       <p>
         <label>{{ $t('keycodes.label') }}:</label>
         <span class="hint">
@@ -168,7 +168,7 @@ export default {
 }
 .tabs {
   display: grid;
-  grid-template: auto / repeat(6, minmax(120px, 200px));
+  grid-template: auto / repeat(7, minmax(60px, 170px));
 }
 .tab {
   text-overflow: ellipsis;
@@ -193,22 +193,23 @@ export default {
 .end-tab input {
   padding: 3px 7px;
   border: 1px solid #cdcdcd;
-  border-radius: 4px;
-  width: 90%;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
   float: right;
+  border-bottom: none;
 }
 .tab-area {
-  height: 350px;
-  padding: 10px 5px;
+  height: 360px;
+  padding: 10px;
   border: 1px solid;
-  border-radius: 0 4px 4px 4px;
+  border-radius: 0 0 4px 4px;
 }
 .tab.active {
   opacity: 1;
 }
 .keycode.isoenter {
   position: absolute;
-  left: 520px;
+  left: 525px;
   top: 117px;
   height: 69px;
 }
@@ -218,7 +219,7 @@ export default {
 .keycode-search-icon {
   position: absolute;
   right: 5px;
-  top: 11px;
+  top: 16px;
   color: #999;
 }
 .tab span {

@@ -1,0 +1,14 @@
+{
+    "keyboards": {
+        "wekey/viso/nov2020_fix_col1": {
+            "keyboard_name": "viso",
+            "keyboard_folder":"wekey/viso/nov2020_fix_col1",
+            "width": 4.5,
+            "height": 7,
+            "keymaps": [],
+            "layouts": {
+                "LAYOUT_numpad_rotary": [{"label":"ESC", "x":0, "y":0.75}, {"label":"Back", "x":1, "y":0.75}, {"label":"Fn", "x":2, "y":0.75}, {"label":"Lock", "x":0, "y":2}, {"label":"/", "x":1, "y":2}, {"label":"*", "x":2, "y":2}, {"label":"-", "x":3, "y":2}, {"label":"7", "x":0, "y":3}, {"label":"8", "x":1, "y":3}, {"label":"9", "x":2, "y":3}, {"label":"+", "x":3, "y":3, "h":2}, {"label":"4", "x":0, "y":4}, {"label":"5", "x":1, "y":4}, {"label":"6", "x":2, "y":4}, {"label":"1", "x":0, "y":5}, {"label":"2", "x":1, "y":5}, {"label":"3", "x":2, "y":5}, {"label":"Enter", "x":3, "y":5, "h":2}, {"label":"0", "x":0, "y":6, "w":2}, {"label":".", "x":2, "y":6}, {"label":"R", "x":2.5, "y":0, "h":0.75}, {"label":"R", "x":3, "y":0.75}, {"label":"R", "x":3.5, "y":0, "h":0.75}]
+            }
+        }
+    }
+}

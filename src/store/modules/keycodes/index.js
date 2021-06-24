@@ -5,15 +5,17 @@ import quantum from './quantum';
 import settings from './kb-settings';
 import media from './app-media-mouse';
 import steno from './steno';
+import wireless from './wireless';
 const state = {
-  keycodes: [...ansi, ...iso_jis, ...quantum, ...settings, ...media],
+  keycodes: [...ansi, ...iso_jis, ...media, ...quantum, ...settings, ...wireless],
   searchFilter: '',
   searchCounters: {
     ANSI: 0,
     'ISO/JIS': 0,
     Quantum: 0,
     KeyboardSettings: 0,
-    AppMediaMouse: 0
+    AppMediaMouse: 0,
+    Wireless: 0
   }
 };
 
@@ -51,14 +53,15 @@ const mutations = {
     state.keycodes = [
       ...ansi,
       ...iso_jis,
+      ...media,
+      ...steno,
       ...quantum,
       ...settings,
-      ...media,
-      ...steno
+      ...wireless
     ];
   },
   disableSteno(state) {
-    state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
+    state.keycodes = [...ansi, ...iso_jis, ...media, ...quantum, ...settings, ...wireless];
   },
   setSearchFilter(state, newVal) {
     state.searchFilter = newVal;
@@ -68,7 +71,8 @@ const mutations = {
         'ISO/JIS': countMatches(state.searchFilter, iso_jis),
         Quantum: countMatches(state.searchFilter, quantum),
         KeyboardSettings: countMatches(state.searchFilter, settings),
-        AppMediaMouse: countMatches(state.searchFilter, media)
+        AppMediaMouse: countMatches(state.searchFilter, media),
+        Wireless: countMatches(state.searchFilter, wireless)
       };
     }
   }

@@ -11,8 +11,8 @@ if (isUndefined(keyboards_baseurl)) {
 }
 export const backend_keyboards_url = `${keyboards_baseurl}/v1/keyboards`;
 export const backend_keyboard_list_url = `${keyboards_baseurl}/v1/keyboard_list.json`;
-export const backend_compile_url = `${backend_baseurl}/v1/compile`;
-export const backend_status_url = `${backend_baseurl}/v1`;
+export const backend_compile_url = `${backend_baseurl}/api/compile`;
+export const backend_status_url = `${backend_baseurl}/api/status`;
 export const backend_readme_url_template = template(
   `${backend_keyboards_url}/<%= keyboard %>/readme.md`
 );

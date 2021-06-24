@@ -1,4 +1,9 @@
 @import './qmk_colors';
+
+select, input {
+  outline: none !important;
+}
+
 // default theme
 html {
   body {
@@ -70,6 +75,9 @@ html {
     .keycode {
       background: #fff;
       border-color: #ccc;
+      &:hover {
+        box-shadow: 0 0 1px #2c3e50;
+      }
     }
     .keycode[title]:before {
       border-left-color: rgba(0, 0, 0, 0);
@@ -80,7 +88,7 @@ html {
       color: #ffa500;
     }
     .clear-button {
-      background-color: #49ad4c;
+      background-color: #2cad83;
       color: #fff;
       border-color: #000;
     }
@@ -89,6 +97,10 @@ html {
       border-color: #ccc;
       &.active {
         background: #eee;
+      }
+      &[title="Wireless"] {
+        background-color: #2cad83;
+        color: #fff;
       }
     }
     .tester-key {
@@ -133,7 +145,7 @@ html {
       color: white;
       border-color: #000;
       &.active {
-        background-color: #49ad4c;
+        background-color: #2cad83;
       }
     }
     span.log-green {
@@ -198,7 +210,7 @@ html {
       background-color: #eee;
       border-color: #ccc;
       button {
-        background-color: #49ad4c;
+        background-color: #2cad83;
         color: #fff;
       }
     }
@@ -206,7 +218,7 @@ html {
       border-color: #cdcdcd;
     }
     .label-button {
-      background-color: #49ad4c;
+      background-color: #2cad83;
       color: white;
       border-color: #000;
     }
@@ -274,7 +286,7 @@ html {
     #resetTest,
     #load-default,
     .ui-button {
-      background-color: #49ad4c;
+      background-color: #2cad83;
       color: white;
       border-color: #000;
     }
@@ -450,9 +462,12 @@ html[data-theme='dark'] {
   }
 
   .keycode {
-    background: #0c0c0c;
+    background: #070521;
     color: white;
-    border-color: #0e0e0e;
+    border-color: #070521;
+    &:hover {
+      box-shadow: 0 0 1px #fff;
+    }
   }
   .layers {
     background-color: $qmk-dark-bg;
