@@ -75,6 +75,12 @@ export default [
     title: `After pressing "SETUP WAKEUP KEY", select the key to be set as wake-up-key by pressing`,
     width: 3000
   },
+  {
+    name: 'SETUP WAKEUP ANYKEY',
+    code: 'WE_WAN',
+    title: `The keyboard is woken up by pressing any key`,
+    width: 3000
+  },
   { width: 0 },
   {
     name: 'PRINT BAT',
