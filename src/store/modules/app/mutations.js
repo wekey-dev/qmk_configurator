@@ -58,20 +58,8 @@ const mutations = {
     }
     state.layout = _layout;
   },
-  setSpeed(state, _speed) {
-    state.speed = _speed;
-  },
-  setPower(state, _power) {
-    state.power = _power;
-  },
-  setBandwidth(state, _bandwidth) {
-    state.bandwidth = _bandwidth;
-  },
-  setSleepDelay(state, _sleepDelay) {
-    state.sleepDelay = _sleepDelay;
-  },
-  setWakeupKey(state, _wakeupKey) {
-    state.wakeupKey = _wakeupKey;
+  setEncoderResolution(state, _encoderResolution) {
+    state.encoderResolution = _encoderResolution;
   },
   setRgbNum(state, _rgbNum) {
     state.rgbNum = _rgbNum;

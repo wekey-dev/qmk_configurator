@@ -52,16 +52,8 @@ keymapHelp:label,Help
 keymapHelp:title,How do I use keymap.json?
 keymapName:label,Keymap Name
 keymapName:placeholder,custom keymap name
-speed:label,BLE Speed
-speed:placeholder,""
-power:label,BLE Power
-power:placeholder,""
-bandwidth:label,BLE Bandwidth
-bandwidth:placeholder,""
-sleepDelay:label,Sleep Delay
-sleepDelay:placeholder,"unit: s, default: 30 min"
-wakeupKey:label,WakeUp Key
-wakeupKey:placeholder,"Wake up key"
+encoderResolution:label,Encoder Resolution
+encoderResolution:placeholder,"1-2-4"
 rgbNum:label,RGB LED Count
 rgbNum:placeholder,"unit: s, default: 16"
 layer:confirm,Are you sure you want to clear layer?

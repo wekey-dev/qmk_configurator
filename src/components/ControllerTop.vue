@@ -77,54 +77,20 @@
       <p>Settings</p>
       <div class="row">
         <div class="col">
-          <label v-tooltip="$t('sleepDelay.label')">{{ $t('sleepDelay.label') }}:</label>
-          <select v-model="sleepDelay" disabled="disabled">
-            <option value="0">Disable</option>
-            <option value="300000">5 min</option>
-            <option value="600000">10 min</option>
-            <option value="900000">15 min</option>
-            <option value="1200000">20 min</option>
-            <option value="1800000">30 min</option>
-            <option value="3600000">1 h</option>
+          <label v-tooltip="$t('encoderResolution.label')">
+            {{ $t('encoderResolution.label') }}:
+          </label>
+          <select v-model="encoderResolution">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
           </select>
         </div>
         <div class="col">
-          <label v-tooltip="$t('speed.label')" >{{ $t('speed.label') }}:</label>
-          <select v-model="speed" disabled="disabled">
-            <option value="1">Energy saving</option>
-            <option value="2">Balance</option>
-            <option value="3">High speed</option>
-            <option value="4">Super fast</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label v-tooltip="$t('wakeupKey.label')">{{ $t('wakeupKey.label') }}:</label>
-          <select v-model="wakeupKey" disabled="disabled">
-            <option value="0">Any key</option>
-            <option value="1">ESC</option>
-            <option value="2">ENTER</option>
-            <option value="3">BACKSPACE</option>
-            <option value="4">TAB</option>
-            <option value="5">SPACE</option>
-            <option value="6">CAPSLOCK</option>
-          </select>
-        </div>
-        <div class="col">
-          <label v-tooltip="$t('power.label')" >{{ $t('power.label') }}:</label>
-          <select v-model="power" disabled="disabled">
-            <option value="0">Normal</option>
-            <option value="4">Strong</option>
-            <option value="8">Extreme</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label v-tooltip="$t('rgbNum.label')" >{{ $t('rgbNum.label') }}:</label>
+          <label v-tooltip="$t('rgbNum.label')">
+            {{ $t('rgbNum.label') }}:
+          </label>
           <select v-model="rgbNum">
-            <option value="16">Default</option>
             <option value="4">4</option>
             <option value="6">6</option>
             <option value="8">8</option>
@@ -135,15 +101,6 @@
             <option value="20">20</option>
             <option value="22">22</option>
             <option value="24">24</option>
-          </select>
-        </div>
-        <div class="col">
-          <label v-tooltip="$t('bandwidth.label')" >{{ $t('bandwidth.label') }}:</label>
-          <select v-model="bandwidth" disabled="disabled">
-            <option value="0">Low</option>
-            <option value="1">Normal</option>
-            <option value="2">High</option>
-            <option value="3">Max</option>
           </select>
         </div>
       </div>
@@ -190,88 +147,20 @@ export default {
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
-    sleepDelay: {
+    encoderResolution: {
       get() {
-        return this.$store.state.app.sleepDelay;
+        return this.$store.state.app.encoderResolution;
       },
       set(value) {
         if (this.isDirty) {
-          var old = this.sleepDelay;
-          this.setSleepDelay(''); // force a refresh
+          var old = this.encoderResolution;
+          this.setEncoderResolution(''); // force a refresh
           Vue.nextTick(() => {
-            this.setSleepDelay(old);
+            this.setEncoderResolution(old);
           });
           return false;
         } else {
-          this.setSleepDelay(value);
-        }
-      }
-    },
-    wakeupKey: {
-      get() {
-        return this.$store.state.app.wakeupKey;
-      },
-      set(value) {
-        if (this.isDirty) {
-          var old = this.wakeupKey;
-          this.setWakeupKey(''); // force a refresh
-          Vue.nextTick(() => {
-            this.setWakeupKey(old);
-          });
-          return false;
-        } else {
-          this.setWakeupKey(value);
-        }
-      }
-    },
-    speed: {
-      get() {
-        return this.$store.state.app.speed;
-      },
-      set(value) {
-        if (this.isDirty) {
-          var old = this.speed;
-          this.setSpeed(''); // force a refresh
-          Vue.nextTick(() => {
-            this.setSpeed(old);
-          });
-          return false;
-        } else {
-          this.setSpeed(value);
-        }
-      }
-    },
-    power: {
-      get() {
-        return this.$store.state.app.power;
-      },
-      set(value) {
-        if (this.isDirty) {
-          var old = this.power;
-          this.setPower(''); // force a refresh
-          Vue.nextTick(() => {
-            this.setPower(old);
-          });
-          return false;
-        } else {
-          this.setPower(value);
-        }
-      }
-    },
-    bandwidth: {
-      get() {
-        return this.$store.state.app.bandwidth;
-      },
-      set(value) {
-        if (this.isDirty) {
-          var old = this.bandwidth;
-          this.setBandwidth(''); // force a refresh
-          Vue.nextTick(() => {
-            this.setBandwidth(old);
-          });
-          return false;
-        } else {
-          this.setBandwidth(value);
+          this.setEncoderResolution(value);
         }
       }
     },
@@ -389,12 +278,8 @@ export default {
       'previewRequested',
       'setKeyboard',
       'setKeymapName',
-      'setSpeed',
-      'setPower',
-      'setBandwidth',
-      'setSleepDelay',
-      'setRgbNum',
-      'setWakeupKey'
+      'setEncoderResolution',
+      'setRgbNum'
     ]),
     ...mapActions('app', [
       'changeKeyboard',
@@ -556,11 +441,7 @@ export default {
           ? _keymapName.slice(this.keyboard.length + 1, _keymapName.length)
           : keymapName;
       compileLayout(this.keyboard, keymapName, this.layout, {
-        speed: Number(this.speed),
-        power: Number(this.power),
-        bandwidth: Number(this.bandwidth),
-        sleepDelay: Number(this.sleepDelay),
-        wakeupKey: Number(this.wakeupKey),
+        encoderResolution: Number(this.encoderResolution),
         rgbNum: Number(this.rgbNum)
       });
     },
@@ -719,7 +600,8 @@ export default {
   background-color: #eee;
   text-transform: uppercase;
 }
-html[data-theme='dark'] #ble-config > p, html[data-theme='dark'] #ble-config > p {
+html[data-theme='dark'] #ble-config > p,
+html[data-theme='dark'] #ble-config > p {
   background-color: #464646;
 }
 #ble-config label {

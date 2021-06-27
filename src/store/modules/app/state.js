@@ -61,11 +61,7 @@ const state = {
   notes: '',
   tutorialEnabled: false,
   electron: false,
-  sleepDelay: 1800000,
-  wakeupKey: 1,
-  power: 4,
-  speed: 3,
-  bandwidth: 1,
+  encoderResolution: 2,
   rgbNum: 16,
   languages: [
     { value: 'en', label: 'English' },
