@@ -97,7 +97,7 @@ export default [
   { width: 0 },
   {
     name: 'PRINT SPEED',
-    code: 'WE_SDS',
+    code: 'WE_LVS',
     title: 'Send BLE Interval value to current connect device',
     width: 2000
   },
