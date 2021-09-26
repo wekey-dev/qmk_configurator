@@ -1,18 +1,18 @@
 {
     "keyboards": [
-        "wekey/ubmk60/v1_0",
-        "wekey/ubmk65/v1_1",
-        "wekey/ubmk65/v1_1_fix_col0",
-        "wekey/ubmk65/v1_1f",
-        "wekey/viso/nov2020",
-        "wekey/viso/nov2020_fix_col1",
-        "wekey/we60/v2_0",
-        "wekey/we63/v2_6",
-        "wekey/we65/v2_0",
-        "wekey/we65/v2_3",
-        "wekey/we65/v2_5",
-        "wekey/we65i/v2_2",
-        "wekey/we65i/v2_5",
-        "wekey/we65i_rgb/v3_0"
+        "wekey/ble/ubmk60/v1_0",
+        "wekey/ble/ubmk65/v1_1",
+        "wekey/ble/ubmk65/v1_1_fix_col0",
+        "wekey/ble/ubmk65/v1_1f",
+        "wekey/ble/viso/nov2020",
+        "wekey/ble/viso/nov2020_fix_col1",
+        "wekey/ble/we60/v2_0",
+        "wekey/ble/we63/v2_6",
+        "wekey/ble/we65/v2_0",
+        "wekey/ble/we65/v2_3",
+        "wekey/ble/we65/v2_5",
+        "wekey/ble/we65i/v2_2",
+        "wekey/ble/we65i/v2_5",
+        "wekey/ble/we65i_rgb/v3_0"
     ]
 }
