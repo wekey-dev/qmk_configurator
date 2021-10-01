@@ -13,6 +13,7 @@
         "wekey/ble/we65/v2_5",
         "wekey/ble/we65i/v2_2",
         "wekey/ble/we65i/v2_5",
+        "wekey/ble/we65i/v2_6",
         "wekey/ble/we65i_rgb/v3_0"
     ]
 }
