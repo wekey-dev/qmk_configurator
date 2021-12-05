@@ -1,8 +1,8 @@
 {
     "keyboards": {
-        "wekey/ble/ubmk65/v1_1_fix_col0": {
+        "wekey/ble/ubmk65/v1_1_remap_col0": {
             "keyboard_name": "ubmk65",
-            "keyboard_folder":"wekey/ble/ubmk65/v1_1_fix_col0",
+            "keyboard_folder":"wekey/ble/ubmk65/v1_1_remap_col0",
             "width": 16,
             "height": 5,
             "keymaps": [],

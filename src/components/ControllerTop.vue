@@ -19,9 +19,9 @@
           @search:focus="opened"
           @search:blur="blur"
           maxHeight="600px"
-          v-model="keyboard"
+          v-model="keyboardValue"
           :clearable="false"
-          :options="keyboards"
+          :options="keyboardList"
           ref="select"
         ></v-select>
       </div>
@@ -141,6 +141,14 @@ export default {
       'configuratorSettings',
       'compileDisabled'
     ]),
+    keyboardList() {
+      return this.keyboards.map(kb => {
+        return {
+          label: this.keyboardRename(kb),
+          code: kb
+        };
+      });
+    },
     isFavoriteKeyboard() {
       return this.keyboard === this.configuratorSettings.favoriteKeyboard;
     },
@@ -179,6 +187,18 @@ export default {
         } else {
           this.setRgbNum(value);
         }
+      }
+    },
+    keyboardValue: {
+      get() {
+        var kb = this.keyboard;
+        return {
+          label: this.keyboardRename(kb),
+          code: kb
+        };
+      },
+      set(value) {
+        this.keyboard = value.code;
       }
     },
     keyboard: {
@@ -288,6 +308,24 @@ export default {
       'setFavoriteKeyboard'
     ]),
     ...mapActions('keymap', ['initTemplates']),
+    keyboardRename(kb) {
+      var realname = kb.replace('wekey/ble/', '');
+      var names = realname.split('/');
+      var results = '';
+      if (names[0]) {
+        var x = names[0];
+        while(x.length < 16) { x += '.'; }
+        results += x.toUpperCase();
+      }
+      if (names[1]) {
+        var x = '[' + names[1] + ']';
+        results += x;
+      }
+      if (names[2]) {
+        results += '(' + names[2] + ')';
+      }
+      return results;
+    },
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.

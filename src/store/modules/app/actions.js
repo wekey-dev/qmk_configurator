@@ -17,8 +17,12 @@ const actions = {
     const r = await axios.get(backend_keyboard_list_url);
     if (r.status === 200) {
       const exclude = getExclusionList();
+      const forRemap = window.location.search.includes('remap');
       const results = r.data.keyboards.filter(keeb => {
         return isUndefined(exclude[keeb]);
+      }).filter(kb => {
+        var isRemap = kb.includes('remap');
+        return forRemap ? isRemap : !isRemap;
       });
       commit('setKeyboards', results);
       return results;

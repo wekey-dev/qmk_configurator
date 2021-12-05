@@ -28,11 +28,11 @@
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
     </div>
-    <div class="bes-discord" style="display:none;">
+    <!--div class="bes-discord" style="display:none;">
       <a v-if="hasError" target="_blank" rel="noopener" :href="discordLink">
         Error? Let us know on QMK Discord.
       </a>
-    </div>
+    </div-->
     <div class="bes-controls" @click="clickSettings">
       <font-awesome-icon
         v-if="!settingsPanelVisible"
@@ -46,6 +46,10 @@
         fixed-width
       />
       {{ $t('settings') }}
+    </div>
+    <div class="for-remap-kb" style="text-align: right;width: 100%;">
+      <a v-if="isRemap" href="/" style="color: #bf6060;font-size: 15px;">ORIGIN</a>
+      <a v-else href="/?remap" style="color: #bf6060;font-size: 15px;">REMAP</a>
     </div>
   </div>
 </template>
@@ -79,6 +83,9 @@ export default {
     },
     discordLink() {
       return 'https://discord.gg/Uq7gcHh';
+    },
+    isRemap() {
+      return window.location.search.includes('remap');
     }
   },
   methods: {

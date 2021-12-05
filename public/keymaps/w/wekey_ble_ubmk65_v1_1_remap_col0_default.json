@@ -1,5 +1,5 @@
 {
-  "keyboard": "wekey/ble/ubmk65/v1_1f",
+  "keyboard": "wekey/ble/ubmk65/v1_1",
   "keymap": "default",
   "layout": "LAYOUT_68_ansi",
   "layers": [

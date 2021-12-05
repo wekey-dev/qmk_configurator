@@ -1,8 +1,8 @@
 {
     "keyboards": {
-        "wekey/ble/viso/nov2020_fix_col1": {
+        "wekey/ble/viso/nov2020_remap_col1": {
             "keyboard_name": "viso",
-            "keyboard_folder":"wekey/ble/viso/nov2020_fix_col1",
+            "keyboard_folder":"wekey/ble/viso/nov2020_remap_col1",
             "width": 4.5,
             "height": 7,
             "keymaps": [],
